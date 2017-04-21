@@ -243,5 +243,40 @@ body {
   }
 /* prmo end */
 
+/* menu */
+#main {
+	margin-top: 20px;
+}
 
+.valid_menu {
+   display: inline;
+   float: left;
+}
+.white_line  {
+   display: inline;
+   float: left;
+   width: 668px;
+}
+.white_line span {
+   border-top: solid 6px #fff;
+   width: 668px;
+   display: table-cell;
+}
+.menu_item {
+	border-top: solid 6px #fff;
+	width: 100px;
+	display: table-cell;
+	cursor: pointer;
+	text-align: center;
+}
+.menu_item.active {
+	border-top: solid 6px #6cd87a;
+}
+.menulink {
+	color: #fff;
+	font-family: cursive;
+}
+.menulink:hover {
+	color: #6cd87a;
+}
 
