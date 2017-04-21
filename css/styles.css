@@ -33,7 +33,7 @@ body {
   color: #fff;
   text-align: center;
   font-weight: bold;
-  font-family: cursive;
+  font-family: cursive,Times,Georgia, serif;
 }
 
 .userinf {
@@ -44,7 +44,7 @@ body {
 
 .userinf .link {
   color: #b19f72;
-  font-family: cursive;
+  font-family: cursive,Times,Georgia, serif;
 }
 
 .userinf .button {
@@ -255,29 +255,60 @@ body {
 .white_line  {
    display: inline;
    float: left;
-   width: 668px;
+   width: 560px;
 }
 .white_line span {
-   border-top: solid 6px #fff;
-   width: 668px;
+   border-top: solid 12px #fff;
+   width: 560px;
    display: table-cell;
 }
 .menu_item {
-	border-top: solid 6px #fff;
-	width: 100px;
+	border-top: solid 12px #fff;
+	padding-top: 10px;
 	display: table-cell;
 	cursor: pointer;
 	text-align: center;
 }
 .menu_item.active {
-	border-top: solid 6px #6cd87a;
+	border-top: solid 12px #a2df0b;
 }
 .menulink {
 	color: #fff;
-	font-family: cursive;
+	font-family: cursive,Times,Georgia, serif;
+	font-size: 21px;
+	margin-left: 26px;
 }
 .menulink:hover {
-	color: #6cd87a;
+	color: #a2df0b;
+}
+
+.home_link {
+	background: url(../img/home.png) no-repeat 6px 11px;
+	width: 80px;
+}
+.home_link.active {
+	background: url(../img/home_hover.png) no-repeat 6px 11px;
+}
+.profile_link {
+	background: url(../img/profile.png) no-repeat 7px 11px;
+	width: 115px;
+}
+.profile_link.active {
+	background: url(../img/profile_hover.png) no-repeat 7px 11px;
+}
+.service_link {
+	background: url(../img/service.png) no-repeat 4px 11px;
+	width: 110px;
+}
+.service_link.active {
+	background: url(../img/service_hover.png) no-repeat 4px 11px;
+}
+.photo_link {
+	background: url(../img/photo.png) no-repeat 9px 11px;
+	width: 100px;
+}
+.photo_link.active {
+	background: url(../img/photo_hover.png) no-repeat 9px 11px;
 }
 
 
@@ -286,41 +317,40 @@ body {
 }
 #content {
 	width: 100%;
+	margin-top: 15px;
 }
 .content_block {
 	float: left;
-	width: 120px;
-	height: 120px;
-	margin: 15px;
+	width: 140px;
+	height: 140px;
+	margin: 10px;
 }
 .content_block_no {
-	width: 120px;
-	height: 128px;
-	margin: 15px;
+	float: left;
+	width: 140px;
+	height: 140px;
+	margin: 10px;
 }
 .content_block_big {
-	width: 350px;
-	height: 271px;
-	margin: 15px;
+	height: 300px;
+	margin: 10px;
 }
 .brown {
-	background-color: #ad9a0f;
+	background-color: #804a08;
 }
 .white {
-	background-color: #fff;
+	background-color: #a2df0b;
 }
 #cleft   {
     float: left;
-	height: 220px;
-	width: 313px;
+	margin-left: 19px;
+	width: 321px;
 }
 #ccenter   {
     float: left;
-	height: 220px;
-	width: 400px;
+	width: 450px;
 }
 #cright  {
     float: left;
-	height: 220px;
 	width: 150px;
 }
