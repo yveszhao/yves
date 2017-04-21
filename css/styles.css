@@ -280,3 +280,47 @@ body {
 	color: #6cd87a;
 }
 
+
+#menu {
+	height: 50px;
+}
+#content {
+	width: 100%;
+}
+.content_block {
+	float: left;
+	width: 120px;
+	height: 120px;
+	margin: 15px;
+}
+.content_block_no {
+	width: 120px;
+	height: 128px;
+	margin: 15px;
+}
+.content_block_big {
+	width: 350px;
+	height: 271px;
+	margin: 15px;
+}
+.brown {
+	background-color: #ad9a0f;
+}
+.white {
+	background-color: #fff;
+}
+#cleft   {
+    float: left;
+	height: 220px;
+	width: 313px;
+}
+#ccenter   {
+    float: left;
+	height: 220px;
+	width: 400px;
+}
+#cright  {
+    float: left;
+	height: 220px;
+	width: 150px;
+}
