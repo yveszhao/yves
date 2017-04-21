@@ -9,4 +9,13 @@ $(function () {
         namespace: "centered-btns"
       });
 
+      $("a.menulink").hover(
+	  function() {
+	    $("span.menu_item").removeClass("active");
+		$(this).parent().addClass("active");
+      },
+	  function() {
+	    $("span.menu_item").removeClass("active");
+      });
+      
 });
