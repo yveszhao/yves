@@ -6,7 +6,7 @@ body {
   width: 55%;
   height: 970px;
   margin: 0 auto;
-  background: url(file:///E:/web/ds01/img/bg.jpg) fixed repeat no-repeat;
+  background: url(../img/bg.jpg) fixed repeat no-repeat;
 }
 
 #header {
@@ -25,7 +25,7 @@ body {
   border-radius: 120px;
   border: solid 2px #fff;
   margin: 40px auto 20px auto;
-  background: #efe7e5 url(file:///E:/web/ds01/img/user.jpg) no-repeat -55px;
+  background: #efe7e5 url(../img/user.jpg) no-repeat -55px;
 }
 
 #username {
@@ -123,7 +123,7 @@ body {
   text-decoration: none;
   height: 61px;
   width: 38px;
-  background: transparent url(file:///E:/web/ds01/img/theme.gif) no-repeat left top;
+  background: transparent url(../img/theme.gif) no-repeat left top;
   margin-top: -45px;
   }
 
@@ -172,7 +172,7 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  background: #000 url(file:///E:/web/ds01/img/theme.gif) no-repeat left 50%;
+  background: #000 url(../img/theme.gif) no-repeat left 50%;
   width: 38px;
   }
 
