@@ -4,7 +4,7 @@ body {
 
 #container {
   width: 970px;
-  height: 970px;
+  height: 931px;
   margin: 0 auto;
   background: url(../img/bg.jpg) fixed repeat no-repeat;
 }
@@ -290,7 +290,7 @@ body {
 
 /* menu */
 #main {
-	margin-top: 33px;
+	margin-top: 42px;
 }
 
 .valid_menu {
@@ -300,11 +300,11 @@ body {
 .white_line  {
    display: inline;
    float: left;
-   width: 560px;
+   width: 534px;
 }
 .white_line span {
    border-top: solid 12px #fff;
-   width: 560px;
+   width: 534px;
    display: table-cell;
 }
 .menu_item {
@@ -359,25 +359,27 @@ body {
 
 #menu {
 	height: 50px;
+	margin: 0 15px;
 }
 #content {
 	width: 100%;
-	margin-top: 15px;
+	margin-top: 25px;
+	height: 420px;
 }
 .content_block {
 	float: left;
-	width: 150px;
-	height: 170px;
+	width: 180px;
+	height: 190px;
 	margin: 5px;
 }
 .content_block_no {
 	float: left;
-	width: 150px;
-	height: 170px;
+	width: 180px;
+	height: 190px;
 	margin: 5px;
 }
 .content_block_big {
-	height: 350px;
+	height: 390px;
 	margin: 5px;
 }
 .brown {
@@ -388,14 +390,39 @@ body {
 }
 #cleft   {
     float: left;
-	margin-left: 19px;
-	width: 321px;
+	margin-left: 10px;
+	width: 380px;
 }
 #ccenter   {
     float: left;
-	width: 450px;
+	width: 380px;
 }
 #cright  {
     float: left;
-	width: 150px;
+	width: 185px;
+}
+#content_bottom {
+	border-bottom: solid 12px #fff;
+	height: 420px;
+	margin: 0 15px;
+}
+.bottom_line {
+	border-bottom: solid 12px #fff;
+	display: block;
+	float: left;
+	width: 180px;
+	height: 20px;
+}
+.bottom_line_ex {
+	border-bottom: solid 12px #fff;
+	display: block;
+	float: left;
+	width: 370px;
+	height: 20px;
+}
+.bot_second,.bot_third,.bot_fourth {
+	margin-left: 10px;
+}
+.bottom_line.active,.bottom_line_ex.active {
+	border-bottom: solid 12px #a2df0b;
 }

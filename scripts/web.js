@@ -17,5 +17,44 @@ $(function () {
 	  function() {
 	    $("span.menu_item").removeClass("active");
       });
+	  
+	  $("div.content_block.col1").hover(
+	  function() {
+	    $("span.bottom_line").removeClass("active");
+		$("span.bottom_line_ex").removeClass("active");
+		$("span.bottom_line.bot_first").addClass("active");
+      },
+	  function() {
+	    $("span.bottom_line.bot_first").removeClass("active");
+      });
+	  
+	  $("div.content_block.col2").hover(
+	  function() {
+	    $("span.bottom_line").removeClass("active");
+		$("span.bottom_line_ex").removeClass("active");
+		$("span.bottom_line.bot_second").addClass("active");
+      },
+	  function() {
+	    $("span.bottom_line.bot_second").removeClass("active");
+      });
+	  
+	  $("div.content_block_big").hover(
+	  function() {
+	    $("span.bottom_line").removeClass("active");
+		$("span.bottom_line_ex").addClass("active");
+      },
+	  function() {
+	    $("span.bottom_line_ex").removeClass("active");
+      });
+	  
+	  $("div.content_block_no").hover(
+	  function() {
+	    $("span.bottom_line").removeClass("active");
+		$("span.bottom_line_ex").removeClass("active");
+		$("span.bottom_line.bot_fourth").addClass("active");
+      },
+	  function() {
+	    $("span.bottom_line.bot_fourth").removeClass("active");
+      });
       
 });
