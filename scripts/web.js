@@ -56,5 +56,6 @@ $(function () {
 	  function() {
 	    $("span.bottom_line.bot_fourth").removeClass("active");
       });
+	  
       
 });
