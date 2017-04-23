@@ -25,7 +25,12 @@ body {
   border-radius: 72px;
   border: solid 2px #fff;
   margin: 25px auto 0 auto;
-  background: #efe7e5 url(../img/user.jpg) no-repeat -79px;
+  /*background: #efe7e5 url(../img/user.jpg) no-repeat -79px;*/
+  background: #efe7e5 url(../img/me.jpg) no-repeat 0 -17px;
+  background-size: 100% auto;
+}
+#userhead.active {
+  border: solid 2px #a2df0b;
 }
 
 #username {

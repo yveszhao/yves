@@ -57,5 +57,11 @@ $(function () {
 	    $("span.bottom_line.bot_fourth").removeClass("active");
       });
 	  
-      
+      $("#userhead").hover (
+	  function() {
+	    $(this).addClass("active");
+      },
+	  function() {
+	    $(this).removeClass("active");
+      });
 });
