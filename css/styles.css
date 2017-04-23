@@ -4,7 +4,7 @@ body {
 
 #container {
   width: 970px;
-  height: 931px;
+  height: 935px;
   margin: 0 auto;
   background: url(../img/bg.jpg) fixed repeat no-repeat;
 }
@@ -484,8 +484,9 @@ body {
 
 /*audio player*/
 .media-wrapper {
-	margin: 115px 0 0 0;
+	height: 153px;
 }
 #audio_player {
+	margin: 125px 0 0;
 	width: 100%;
 }
