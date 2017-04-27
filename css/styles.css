@@ -492,6 +492,7 @@ body {
 	height: 153px;
 }
 #audio_player {
-	margin: 125px 0 0;
 	width: 100%;
+	position: relative;
+	top: 118px;
 }
