@@ -1,3 +1,5 @@
 #This is a personal web pages design.
-#Icon come from http://www.iconfont.cn/collections/show/918, http://www.iconpng.com
+
+##Icons came from [Iconfont](http://www.iconfont.cn/collections/show/918) and [Iconpng](http://www.iconpng.com).
+
 
