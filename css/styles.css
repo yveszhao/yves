@@ -8,7 +8,9 @@ body {
 
 #container {
   width: 970px;
-  height: 935px;
+  /*height: 935px;*/
+  box-sizing: border-box;
+  min-height: 100%;
   margin: 0 auto;
   background: url(../img/bg.jpg) fixed repeat no-repeat;
 }
