@@ -64,4 +64,8 @@ $(function () {
 	  function() {
 	    $(this).removeClass("active");
       });
+	  
+	  $("div#session1").click (function(){
+		window.location.href = "dns.html";
+	  });
 });
