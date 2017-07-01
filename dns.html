@@ -5,7 +5,9 @@
 <title>DNS session</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-
+<link rel="stylesheet" type="text/css" href="css/dns.css">
+<script type="text/javascript" src="scripts/jquery-latest.min.js"></script>
+<script type="text/javascript" src="scripts/dns.js"></script>
 </head>
 
 <body>
@@ -13,24 +15,97 @@
 <div id="container">
 
   <div id="header">
-
+	<h1>DNS</h1>
   </div>
-
 
   <div id="main">
 	<div id="menu">
-		
+		<a href="#" class="menuLink" ct="bg_content"><h2>&sect; Background &amp; History</h2></a>
+		<a href="#" class="menuLink" ct="wi_content"><h2>&sect; What is DNS?</h2></a>
+		<a href="#" class="menuLink" ct="hd_content"><h2>&sect; How does DNS work?</h2></a>
+		<a href="#" class="menuLink" ct="rr_content"><h2>&sect; Resource Records</h2></a>
 	</div>
 	  
 	<div id="content">
+		<div id="bg_content" style="display:none;">
+			<h2>Background &amp; History</h2>
+			<h3>ARPAnet</h3>
+			<p>&bull; In 1960s, U.S. Department of Defense's Advanced Research Projects Agency began funding the <strong>ARPAnet</strong>, an experimental wide area computer network, and it is only for U.S. government use.</p>
+			<h3>TCP/IP and Internet</h3>
+			<p>&bull; In 1980s, <strong>TCP/IP</strong> protocol was developed and soon became the standard host-networking protocol on ARPAnet. Then in the University of California at Berkeley's BSD Unix OS, they includes the TCP/TP suite ad it's free to universities. Because it's cheap enough, so many many computers started to connect to the ARPAnet which is becoming the well-known <strong>Internet</strong>.</p>
+			<h3>NSFNET</h3>
+			<p>&bull; In 1988s, ARPAnet was retired. <strong>NSFNET</strong> took its place. NSFNET is funded by the National Science Foundation.</p>
+			<h3>Commercialize</h3>
+			<p>&bull; In 1995, Internet made a transition from using the NSFNET as a backbone to using <strong>mutiple commercial</strong> backbones, run by telecommunications companies.</p>
+			<h3>DNS history</h3>
+			<p>&bull; In 1970s, the ARPAnet has only hunderds of hosts. A single <strong>HOSTS.TXT</strong> file, contained a name-to-address mapping for every host connected in ARPAnet. This file is familiar with Unix host table /etc/hosts.</p>
+			<p>&bull; The HOSTS.TXT was maintained by SRI's Network Information Center and distributed from a single host. The HOSTS file was updated once or twice a week. At that time, there is no guarantee to have uniqueness hostnames.</p>
+			<p>&bull; When ARPAnet moved to TCP/IP, the population of the network exploded. And it becomes harder and harder to maintain the HOSTS.TXT.</p>
+			<p>&bull; The government starts to look for a successor for HOSTS.TXT. They want to create a system that solved the problems inherent in a unified host-table system. The new system should allow local administration of data yet make that data globally available.</p>
+			<p>&bull; In 1984s, <strong>Paul Mockapetris</strong> released RFCs 882 and 883, which described the <strong>Domain Name System</strong>.</p>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="wi_content" style="display:none;">
+			<h2>What is DNS?</h2>
+			<h3>Domain Name System is a distributed database.</h3>
+			<img src="img/DNStree.jpg"/><br/>
+			<p>The depth of the tree is limited to 127 levels. Each node can be up to 63 characters long.</p>
+			<h3>FQDN</h3>
+			<p>Fully Qualified Domain Name. It is the absolute domain name which is relative to the root and unambiguously specifies a node's location in the hierarchy.</p><br/>
+			<h3>Domain Namespace</h3>
+			<p>DNS's distributed database is indexed by domain names. Each domain name is essentially just a path in a large inverted tree, called the domain namespace. i.e. ".com"</p><br/>
+			<h3>Domain</h3>
+			<p>A domain is simply a subtree of the domain namespace. i.e. "spdrs.com"</p><br/>
+			<h3>SubDomain</h3>
+			<p>A domain may have several subtrees of its own, called subdomains. i.e. "us.spdrs.com","uk.spdrs.com"</p><br/>
+			<h3>The root</h3>
+			<p>The DOT "." is the root of the DNS tree, the very top domain for every host, i.e. www.spdrs.com. (There is a dot in the end and browsers will add it for you.) </p><br/>
+			<h3>Nameservers</h3>
+			<p>The programs that store information about the domain namespace are called nameservers.</p><br/>
+			<h3>Root Nameservers</h3>
+			<p>There is only 13 root domain server systems in the world.</p>
+			<img src="img/DNSroots.jpg"/>
+			<h3>Why the number 13?</h3>
+			<img src="img/why13.jpg"/><br/>
+			<h3>Zone</h3>
+			<p>A zone contains the domain names and data in any subdomains that aren't delegated away. i.e. "spdrs.com" is a zone including all its subdomains but not including "spdrmobile.spdrs.com".</p><br/>
+			<h3>Resolvers</h3>
+			<p>Resolvers are the clients that access nameservers. The resolver handles,</p>
+			<p>&bull; Query a nameserver</p>
+			<p>&bull; Interpreting responses.</p>
+			<p>&bull; Returning info to the programs requested it.</p><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="hd_content" style="display:none;">
+			<h2>DNS query methods</h2>
+			<h3>Recursion</h3>
+			<img src="img/rec.jpg"/><br/>
+			<h3>Iteration</h3>
+			<img src="img/ite.jpg"/><br/>
+			<h3>DNS resolution process</h3>
+			<img src="img/proc.jpg"/><br/>
+			<h3>DNS local cache</h3>
+			<p>For Windows: C:\Windows\System32\drivers\etc\hosts</p>
+			<img src="img/hosts.jpg"/><br/>
+			<code>ipconfig /displaydns</code><br/>
+			<code>ipconfig /flushdns</code><br/>
+			<h3>DNS nameservers cache</h3><br/>
+			<h3>DNS nameservers Time to Live (TTL)</h3>
+			<p>TTL is the amount of time that any nanmeserver is allowed to cache the data.</p><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="rr_content" style="display:none;">
+			<h2>DNS Resource Records</h2>
+			<h3>SOA Record</h3>
+			<p>Start Of Authority</p><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
 	</div>
 		
-	  
   </div>
 
 
   <div id="footer">
-	
   </div>
 
 </div>

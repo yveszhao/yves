@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: #d5beaa;
+  height: 100%;
+}
+
+#conainer {
+  width: 970px;
+  box-sizing: border-box;
+  margin: 100px auto;
+  background-color: #fff;
+}
+
+h1 {
+	color: #AD5A5A;
+	font-family: Georgia;
+}
+
+h2 {
+	color: #C48888;
+	font-family: Tahoma;
+}
+
+a {
+	text-decoration: none;
+}
