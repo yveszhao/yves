@@ -24,6 +24,11 @@
 		<a href="#" class="menuLink" ct="wi_content"><h2>&sect; What is DNS?</h2></a>
 		<a href="#" class="menuLink" ct="hd_content"><h2>&sect; How does DNS work?</h2></a>
 		<a href="#" class="menuLink" ct="rr_content"><h2>&sect; Resource Records</h2></a>
+		<a href="#" class="menuLink" ct="ps_content"><h2>&sect; Primary and Slave nameservers</h2></a>
+		<a href="#" class="menuLink" ct="ct_content"><h2>&sect; Commands &amp; Tools</h2></a>
+		<a href="#" class="menuLink" ct="sp_content"><h2>&sect; SPDRS DNS post CDN</h2></a>
+		<a href="#" class="menuLink" ct="mo_content"><h2>&sect; SPDRSMobile domain</h2></a>
+		<a href="#" class="menuLink" ct="hk_content"><h2>&sect; Security &amp; Attack</h2></a>
 	</div>
 	  
 	<div id="content">
@@ -97,7 +102,62 @@
 		<div id="rr_content" style="display:none;">
 			<h2>DNS Resource Records</h2>
 			<h3>SOA Record</h3>
-			<p>Start Of Authority</p><br/>
+			<p>Start Of Authority Record. SOA Record indicates that this nameserver is the best source of information for the data within this zone. </p>
+			<img src="img/soa.jpg"/><br/>
+			<h3>NS Record</h3>
+			<p>Nameserver Record. It indicates the authoritative records for the zone's name servers. NS RRs at a point of delegation are never authoritative, only NS RRs within the zone are regarded as authoritative.</p>
+			<img src="img/ns.jpg"/><br/>
+			<h3>Comparing SOA Record and NS record</h3>
+			<p>Both of them look similar. Ideally, there is only one SOA record in a zone. An NS record declares that a given zone is served by a given nameserver, and it could have mutiple nameservers thus mutiple NS records.</p><br/>
+			<h3>A Record (IPV4) / AAAA Record (IPV6)</h3>
+			<p>A stands for address. A domain can have mutiple A records. It maps the name to IP address.</p>
+			<img src="img/a.jpg"/><br/>
+			<img src="img/a6.jpg"/><br/>
+			<h3>CNAME Record</h3>
+			<p>Canonical(权威的) name. When a nameserver looks up a name and finds a CNAME record, it replaces the name with the canonical name and looks up the new name.</p>
+			<img src="img/cname.jpg"/><br/>
+			<h3>DNAME Record</h3>
+			<p>Redirection name. DNAME causes all labels BELOW its owner-name - or expressed another way, anything with labels to the left of the owner-name - to be re-directed to another name.</p>
+			<img src="img/dname.jpg"/><br/>
+			<h3>MX Record</h3>
+			<p>Mail Exchange Record. Specifies the name and relative preference of mail servers (mail exchangers in the DNS jargon) for the zone. The MX RR is used by external SMTP (Mail) Agents to route incoming mail for the domain.</p>
+			<img src="img/mxx.jpg"/><br/>
+			<h3>PTR Record</h3>
+			<p>Pointer records are the opposite of A and AAAA  RRs and are used in Reverse Map zone files to map an IP address (IPv4 or IPv6) to a host name.</p>
+			<img src="img/ptr.jpg"/><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="ps_content" style="display:none;">
+			<p>The named.conf tells the nameserver whether it is a primary nameserver or a slave. NS records cannot tell us about it.</p><br/>
+			<h3>What's the difference between a primary nameserver and a slave nameserver?</h3>
+			<p>The crucial difference is where the server gets its data. A primary nameserver reads its data from zone datafiles. A slave nameserver loads its data over the network from another nameserver which called zone transfer.</p><br/>
+			<p>A slave nameserver is not limited to load zones from a primary nameserver, it can also load from another slave nameserver and cache the data.</p><br/>
+			<p>The advantage is you only have to maintain the primary nameserver datafiles for your zone.</p><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="ct_content" style="display:none;">
+			<h2>Commands &amp; Tools</h2>
+			<p>&bull; ping</p><br/>
+			<p>&bull; nslookup</p><br/>
+			<p>&bull; dig</p>
+			<p>dig @server name type, i.e. dig www.oolec.com ; dig www.oolec.com mx ; dig @202.106.0.20 www.oolec.com a ; dig www.oolec.com a +tcp</p><br/>
+			<p>&bull; https://intodns.com</p><br/>
+			<p>&bull; http://toolbar.netcraft.com/site_report?url=www.spdrs.com</p><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="sp_content" style="display:none;">
+			<img src="img/spdr1.jpg"/><br/>
+			<img src="img/spdr2.jpg"/><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="mo_content" style="display:none;">
+			<p>www.spdrsmobile.com is hosted on vendor's DNS nameservers, to make it redirect to www.spdrs.com on DNS level, we created a NS record for this zone and delegated this zone by StateStreet DNS nameservers. After that we also created a CNAME for the spdrsmobile.com and the CNAME record is pointing to www.spdrs.com.</p><br/>
+			<p>spdrsmobile.spdrs.com is a subdomain of spdrs.com and being delegated by vendor's DNS nameservers. Because its parent domain *.spdrs.com is owned by StateStreet DNS servers, we just created CNAME record to point it to www.spdrs.com.</p><br/>
+			<a href="#" class="letsback">Back To Menu</a>
+		</div>
+		<div id="hk_content" style="display:none;">
+			<img src="img/dnsattack.jpg"/><br/>
+			<p>DDoS:Distributed Denial of Service.</p><br/>
 			<a href="#" class="letsback">Back To Menu</a>
 		</div>
 	</div>
