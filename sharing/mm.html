@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>密码</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" src="../scripts/vue.min.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+	<h1>玩玩儿密码</h1>
+  </div>
+
+  <div><h2>第 {{sliceNum}} 关</h2></div>
+  
+  <div id="main" style="text-align:center;">
+	<div id="content" style="font-size:45px;">
+		<div id="No1">
+			<p><strong>wo ne do cd na re hp ic gn iy al pe ra ew</strong></p>
+			<p id="No1%1" style="display:none;"><strong>提示：匾额</strong></p>
+			<p id="No1%2" style="display:none;"><strong>答案：从右向左重新排序</strong></p>
+			<p id="No1%3" style="display:none;"><strong>we are playing cipher and code now</strong></p>
+			<p id="No1%4" style="display:none;"><strong>特征：如果原文是拼音，则一般都会在末尾处留下一个声母音（如：wu中的w） 
+如果原文是英文，则一般都会大量出现“eht”这个词</strong></p>
+		</div>
+		<div id="No2" style="display:none;">
+			<p><strong>23 08 01 20 09 19 20 08 05 19 13 01 12 12 05 19 20 18 15 15 13 09 14 20 08 05 23 15 18 12 04？</strong></p>
+			<p id="No2%1" style="display:none;"><strong>提示：字母表</strong></p>
+			<p id="No2%2" style="display:none;"><strong>答案：数字是字母在字母表中的序数 </strong></p>
+			<p id="No2%3" style="display:none;"><strong>what is the smallest room in the world?  </strong></p>
+		</div>
+		<div id="No3" style="display:none;">
+			<p><strong>XPBJCFJKJOHUJBOBONFO</strong></p>
+			<p id="No3%1" style="display:none;"><strong>提示：字母表 换位</strong></p>
+			<p id="No3%2" style="display:none;"><strong>答案：单字母替换密码之 - 凯撒移位密码，用26位字母表全部往前移一位</strong></p>
+			<p id="No3%3" style="display:none;"><strong>WOAIBEIJINGTIANANMEN 我爱北京天安门</strong></p>
+			<p id="No3%4" style="display:none;"><strong>特征：统计字母出现频率，英文中出现频率较高的9个英文字母分别是：A、E、H、I、N、O、R、S、T</strong></p>
+		</div>
+		<div id="No4" style="display:none;">
+			<p><strong>---/-*/*/ *--/*/*/-*-/ ****/*-/***-/*/ ***/*/***-/*/-*/ -**/*-/-*--/***/</strong></p>
+			<p id="No4%1" style="display:none;"><strong>提示：电报</strong></p>
+			<p id="No4%2" style="display:none;"><strong>答案：莫斯电码，1844年由莫尔发明的电报通信手段 </strong></p>
+			<p id="No4%3" style="display:none;"><strong>ONE WEEK HAVE SEVEN DAYS</strong></p>
+			<img id="No4%4" style="display:none;" src="../img/mosi.jpg"/>
+		</div>
+		<div id="No5" style="display:none;font-size:25px;">
+			<p><strong>%53%68%65%20%73%65%6C%73%20%73%65%61%73%68%65%6C%6C%73%20%6F%6E%20%74%68%65%20<br/>%73%65%61%73%68%6F%72%65%2E%20%45%67%2E%20%53%69%78%20%73%69%6C%6C%79%20%73%6C%65%65%70%65<br/>%72%73%20%73%6C%65%70%74%20%73%6F%66%74%6C%79%20%6F%6E%20%73%69%6C%6B%20%73%68%65%65%74%73%2E </strong></p>
+			<p id="No5%1" style="display:none;"><strong>提示: URL</strong></p>
+			<p id="No5%2" style="display:none;"><strong>答案：</strong></p>
+			<p id="No5%3" style="display:none;"><strong>She sels seashells on the seashore. Eg. Six silly sleepers slept softly on silk sheets. </strong></p>
+		</div>
+		<div id="No6" style="display:none;">
+			<p><strong>tcotl/hifhi/er_ef/_c__e/_l___/_e___/</strong></p>
+			<p id="No6%1" style="display:none;"><strong>提示: 栅栏密码</strong></p>
+			<p id="No6%2" style="display:none;"><strong>答案：the circle of the life </strong></p>
+			<p id="No6%3" style="display:none;"><strong>tcotl/<br/>hifhi/<br/>er_ef/<br/>_c__e/<br/>_l___/<br/>_e___/<br/></strong></p>
+		</div>
+		<div id="No7" style="display:none;font-size:25px;">
+			<p><strong>31104152 40502250215161904170 305112410281905091 80102250 10218150104052 8150915121225040 0251 10201041405141 50606051812091 0251 209040 605181 028050 51215231619030 7010315091 </strong></p>
+			<p id="No7%1" style="display:none;"><strong>提示：分组 字母表</strong></p>
+			<p id="No7%2" style="display:none;"><strong>答案：Many developing countries have already resolved to abandon efforbs to bid for the olympic games. </strong></p>
+			<p id="No7%3" style="display:none;"><strong>观察发现每一个字符串都是由偶数个数字组成的，所以我们第一步要做的就是分组。<br/> 
+31 10 41 52 / 40 50 22 50 21 51 61 90 41 70 / 30 51 12 41 02 81 90 50 91 / 80 10 22 50 / 10 21 81 50 10 40 52 / 81 50 91 51 21 22 50 40 / 02 51 / 10 20 10 41 40 51 41 / 50 60 60 51 81 20 91 / 02 51 / 20 90 40 / 60 51 81 / 02 80 50 / 51 21 52 31 61 90 30 / 70 10 31 50 91 <br/>
+这样整理完后也就不难看出端倪了，该段文字是将字母转换为数字，再将数字颠倒次序而成的， </strong></p>
+		</div>
+		<div id="No8" style="display:none;">
+			<p><strong>WYNBIUUUBNNOOGADWSOUEG</strong></p>
+			<p id="No8%1" style="display:none;"><strong>提示: 栅栏密码</strong></p>
+			<p id="No8%2" style="display:none;"><strong>答案：wo yong baidu wu suo bu neng</strong></p>
+			<p id="No8%3" style="display:none;"><strong>WYNBIUUUBNN<br/>OOGADWSOUEG<br/></strong></p>
+		</div>
+		<div id="No9" style="display:none;">
+			<p><strong>2122827432 6333 7163913273 336373 7132737463622153 41214362 </strong></p>
+			<p id="No9%1" style="display:none;"><strong>提示: 九宫格输入法</strong></p>
+			<p id="No9%2" style="display:none;"><strong>答案：Abuse of power for personal gain.</strong></p>
+			<p id="No9%3" style="display:none;"><strong>手机九宫格输入法，两个数字一组，第一位对应九宫格数字，第二位对应这个数字上的第几个字母。</strong></p>
+			<img id="No9%4" style="display:none;width:250px;height:170px;" src="../img/jiugongge.jpg"/>
+			<p id="No9%5" style="display:none;"><strong>特征：没有1开头，第二位最大是4（范围1-4）</strong></p>
+		</div>
+		<div id="No10" style="display:none;">
+			<p><strong>6231 211222 123311718151513132 9142 516231 33621241523122 </strong></p>
+			<p id="No10%1" style="display:none;"><strong>提示: 电脑键盘</strong></p>
+			<p id="No10%2" style="display:none;"><strong>答案：</strong></p>
+			<p id="No10%3" style="display:none;"><strong>先整理： 
+62 31 / 21 12 22 / 12 33 11 71 81 51 51 31 32 / 91 42 / 51 62 31 / 33 62 12 41 52 31 22<br/>
+第一个数字有数字1，所以不是手机，第二个数字是1-3，所以判断是电脑键盘。 
+第一个数字代表横坐标（大键盘区的数字)，第二个数字代表纵坐标。 
+整理，完成： <br/>
+He was acquitted of the charges. 
+</strong></p>
+		</div>
+		<div id="No11" style="display:none;">
+			<p><strong>(6,4)(1,4)(9,7) (6,4)(1,4)(9,7) (2,1)(7,7)(3,7) (2,1)(8,7) 
+(5,7)(8,7)(1,4)(6,1) (5,7)(8,7)(1,4)(6,1) (2,1)(8,7)(1,4)(6,1)(5,4) (2,4)(6,4)(1,4)(6,1)(5,4) </strong></p>
+			<p id="No11%1" style="display:none;"><strong>提示: 电脑键盘</strong></p>
+			<p id="No11%2" style="display:none;"><strong>答案：（大键盘数字，小键盘数字） </strong></p>
+			<p id="No11%3" style="display:none;"><strong>hao hao xue xi 
+tian tian xiang shang <br/>好好学习，天天向上。</strong></p>
+		</div>
+	</div>	
+  </div>
+
+
+  <div id="footer" style="position:absolute; bottom:40px;">
+	<button v-on:click="showNextTip()">Next Tip ></button>
+	<button v-on:click="goToNextSlice()">Next Slice >></button>
+	<button v-on:click="goToPrevSlice()">Prev Slice <<</button>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+var vm = new Vue({
+        el: '#container',
+        data: {
+            sliceNum: 1,
+			tipNum: 0
+        },
+        methods: {
+            goToNextSlice: function() {
+                document.getElementById("No" + this.sliceNum).style.display = "none";
+				this.sliceNum += 1;
+				this.tipNum = 0;
+				document.getElementById("No" + this.sliceNum).style.display = "block";
+            },
+			goToPrevSlice: function() {
+				if (this.sliceNum != 1) {
+					document.getElementById("No" + this.sliceNum).style.display = "none";
+					this.sliceNum -= 1;
+					this.tipNum = 0;
+					document.getElementById("No" + this.sliceNum).style.display = "block";
+				}
+            },
+			showNextTip: function() {
+				this.tipNum += 1;
+				document.getElementById("No" + this.sliceNum + "%" + this.tipNum).style.display = "block";
+			}
+        }
+    })
+</script>
+
+</body>
+
+</html>

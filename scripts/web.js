@@ -66,6 +66,6 @@ $(function () {
       });
 	  
 	  $("div#session1").click (function(){
-		window.location.href = "dns.html";
+		window.location.href = "sharing/index.html";
 	  });
 });
